@@ -13,7 +13,7 @@ import { formatCurrency } from "./utils";
 declare global {
   var sql: ReturnType<typeof postgres> | undefined;
 }
-const sql =
+export const sql =
   global.sql ||
   postgres(process.env.POSTGRES_URL!, {
     ssl: false,
